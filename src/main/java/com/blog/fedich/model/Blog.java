@@ -7,19 +7,18 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table
 @Getter
 @Setter
+@Table(name = "blogs")
 public class Blog {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
     private String name;
 
-    @Column
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Topic> topics;
 
     public Blog() {}

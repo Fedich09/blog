@@ -5,16 +5,16 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table
 @Getter
 @Setter
+@Table(name = "topics")
 public class Topic {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
     private String content;
 
     public Topic() {}

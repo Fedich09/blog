@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class TopicRepoImpl {
+public class TopicService {
     private final TopicRepo topicRepo;
 
     public Topic saveTopic(Topic topic) {

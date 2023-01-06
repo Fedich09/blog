@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class UserRepoImpl {
+public class UserService {
     private final UserRepo userRepo;
 
     public User saveUser(User user) {

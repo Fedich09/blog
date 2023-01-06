@@ -5,17 +5,23 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table
 @Getter
 @Setter
+@Table(name = "users")
 public class User {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
-    @JoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "blog_id", referencedColumnName = "id")
     private Blog blog;
 
     public User() {}
 }
+
+
+
+
+
