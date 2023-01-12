@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class BlogRepoImpl {
+public class BlogService {
     private final BlogRepo blogRepo;
 
     public Blog saveBlog(Blog blog) {
